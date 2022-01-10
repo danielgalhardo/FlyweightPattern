@@ -6,10 +6,10 @@ public class FlyweightTest {
     @Test
     void retornaMesmoHashCode()
     {
-       Caneta canetaVermelhaFinaUm = CanetaFactory.getThinPen("VERMELHA");
+       Caneta canetaVermelhaFinaUm = CanetaFactory.getCanetaPontaFina("VERMELHA");
        assertEquals("Escrevendo com a cor: VERMELHA com a caneta fina: Oi!",canetaVermelhaFinaUm.escreve("Oi!"));
 
-        Caneta canetaVermelhaFinaDois = CanetaFactory.getThinPen("VERMELHA");
+        Caneta canetaVermelhaFinaDois = CanetaFactory.getCanetaPontaFina("VERMELHA");
         assertEquals("Escrevendo com a cor: VERMELHA com a caneta fina: Tchau!",canetaVermelhaFinaUm.escreve("Tchau!"));
 
 
@@ -20,10 +20,10 @@ public class FlyweightTest {
     @Test
     void retornaDiferentesHashCodes()
     {
-        Caneta canetaVermelhaFinaUm = CanetaFactory.getThinPen("VERMELHA");
+        Caneta canetaVermelhaFinaUm = CanetaFactory.getCanetaPontaFina("VERMELHA");
         assertEquals("Escrevendo com a cor: VERMELHA com a caneta fina: Oi!",canetaVermelhaFinaUm.escreve("Oi!"));
 
-        Caneta canetaPretaFina = CanetaFactory.getThinPen("PRETA");
+        Caneta canetaPretaFina = CanetaFactory.getCanetaPontaFina("PRETA");
         assertEquals("Escrevendo com a cor: PRETA com a caneta fina: Oi!",canetaPretaFina.escreve("Oi!"));
 
         assertNotEquals(canetaVermelhaFinaUm.hashCode(), canetaPretaFina.hashCode());
