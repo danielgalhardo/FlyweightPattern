@@ -3,7 +3,7 @@ import java.util.HashMap;
 public class CanetaFactory {
     private static final HashMap<String, Caneta> canetasMap = new HashMap<>();
 
-    public static Caneta getThickPen(String cor)
+    public static Caneta getCanetaPontaGrossa(String cor)
     {
         String chave = cor + "-GROSSA";
 
@@ -20,7 +20,7 @@ public class CanetaFactory {
         return caneta;
     }
 
-    public static Caneta getThinPen(String cor)
+    public static Caneta getCanetaPontaFina(String cor)
     {
         String chave = cor + "-FINA";
 
@@ -37,7 +37,7 @@ public class CanetaFactory {
         return caneta;
     }
 
-    public static Caneta getMediumPen(String cor)
+    public static Caneta getCanetaPontaMedia(String cor)
     {
         String chave = cor + "-MEDIA";
 
